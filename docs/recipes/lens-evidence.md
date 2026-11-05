@@ -1,0 +1,9 @@
+# Lens listing evidence — November 4, 2026
+
+Inspected private source p3t3rango/musicnerd-lens at 76a9205 and its 25-commit history. No repository visibility changes, source publication or Lens code edits. Public landing reviewed in Safari at https://v0-musicnerd-lens.vercel.app/.
+
+Evidence: app/api/analyze/route.ts (Gemini model, quick/deep prompts, JSON requests, no retrieval tool); components/scanner.tsx (camera, JPEG capture, library upload); components/musicnerd-app.tsx (views, initial result saved); components/results-view.tsx and swipe-facts.tsx (second-fact trigger, separate deep-fact state, swipe controls, source links, native share); hooks/use-scan-history.ts (localStorage, max50, delete/clear); app/layout.tsx and package.json (fonts, v0/Next stack, Analytics).
+
+Recipe reconstructed from implementation/history, not represented as original v0 transcript. Improvements such as image MIME normalization, response validation, accessibility and evidence checking are explicitly reproduction requirements, not claims about completed original features. Live Gemini analysis and camera capture were not exercised for this listing edit. Source URL is intentionally empty: this is an image-input experience, not a documentary derived from one fixed public source. Private repository URL is not published in the listing.
+
+Published: Lab mn_apps row musicnerd-lens (creator peterango, status published), updated only about/instructions/tools_used. Recipe 6,147 characters; tools/process notes 1,641. Generic ProtocolDetails now uses the approved recipe-box/preview/expand pattern with copy feedback, manual fallback and collapsible notes. Local Safari review: 390px light and 1100px dark. Copy pasted into a local verification textarea retained the full 6,148-character source including its trailing newline and final integration boundary. Deployment dpl_8v5hyvA4YCMQLoZbHYd6ha4mg9nm READY on lab.musicnerd.net. Build passed.

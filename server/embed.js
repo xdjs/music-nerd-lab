@@ -1,0 +1,13 @@
+import dns from 'node:dns/promises';
+import https from 'node:https';
+import ipaddr from 'ipaddr.js';
+export function publicAddress(address){try{return ipaddr.process(address).range()==='unicast';}catch{return false;}}
+export function targetUrl(input){const u=new URL(input);if(u.protocol!=='https:'||u.username||u.password||(u.port&&u.port!=='443'))throw Error('Use a public HTTPS address on port 443.');if(u.hostname==='localhost'||u.hostname.endsWith('.local')||u.hostname.endsWith('.internal'))throw Error('Private network addresses are not supported.');return u;}
+async function head(u){const host=u.hostname.replace(/^\[|\]$/g,'');const addresses=ipaddr.isValid(host)?[{address:host,family:ipaddr.parse(host).kind()==='ipv4'?4:6}]:await dns.lookup(host,{all:true});if(!addresses.length||addresses.some(a=>!publicAddress(a.address)))throw Error('Private network addresses are not supported.');const chosen=addresses[0];return new Promise((resolve,reject)=>{const req=https.request(u,{method:'HEAD',timeout:5000,maxHeaderSize:16384,lookup:(_hostname,_options,cb)=>cb(null,chosen.address,chosen.family),headers:{'User-Agent':'MusicNerdEmbedCheck/1.0'}},res=>{res.resume();resolve({status:res.statusCode,headers:res.headers});});req.on('timeout',()=>req.destroy(Error('App did not respond in time.')));req.on('error',reject);req.end();});}
+export function embeddingPolicy(headers,storeOrigin='https://lab.musicnerd.vercel.app'){
+ const csp=headers['content-security-policy']||'';
+ const policies=csp.split(',');let hasAncestors=false;
+ for(const policy of policies){const directive=policy.split(';').map(x=>x.trim()).find(x=>/^frame-ancestors(?:\s|$)/i.test(x));if(!directive)continue;hasAncestors=true;const sources=directive.split(/\s+/).slice(1);if(sources.includes("'none'"))return 'blocked';if(!sources.includes('*')&&!sources.includes('https:')&&!sources.includes(storeOrigin))return 'blocked';}
+ if(!hasAncestors&&/deny|sameorigin/i.test(headers['x-frame-options']||''))return 'blocked';return 'unknown';
+}
+export async function inspectEmbed(input,origin){let u=targetUrl(input);for(let n=0;n<4;n++){const r=await head(u);if([301,302,303,307,308].includes(r.status)&&r.headers.location){u=targetUrl(new URL(r.headers.location,u).href);continue;}if(r.status<200||r.status>=400)return {status:'unknown',message:`The app returned HTTP ${r.status}. Test it directly before publishing.`};const status=embeddingPolicy(r.headers,origin);return {status,url:u.href,message:status==='blocked'?'This app blocks embedding. Use “Open in a new tab”.':'No blocking headers found. A reviewer still needs to test the embedded app.'};}throw Error('Too many redirects.');}

@@ -1,0 +1,8 @@
+-- This shared project permits anonymous Auth sessions; Lab writes require a permanent account.
+create policy lab_permanent_account on public.mn_profiles as restrictive for all to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true') with check ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+create policy lab_permanent_account on public.mn_apps as restrictive for all to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true') with check ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+create policy lab_permanent_account on public.mn_comments as restrictive for all to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true') with check ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+create policy lab_permanent_account on public.mn_activity as restrictive for all to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true') with check ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+create policy lab_permanent_account on public.mn_follows as restrictive for all to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true') with check ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+create policy lab_permanent_account on public.mn_reports as restrictive for all to authenticated using ((select auth.jwt()->>'is_anonymous') is distinct from 'true') with check ((select auth.jwt()->>'is_anonymous') is distinct from 'true');
+alter policy mn_images_upload on storage.objects with check(bucket_id='mn-images' and (storage.foldername(name))[1]=(select auth.uid())::text and (select auth.jwt()->>'is_anonymous') is distinct from 'true');

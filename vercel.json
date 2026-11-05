@@ -1,0 +1,62 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "functions": {
+    "api/page.js": {
+      "includeFiles": "dist/index.html"
+    },
+    "api/check-embed.js": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/:creator/:slug",
+      "destination": "/api/page?creator=:creator&slug=:slug"
+    },
+    {
+      "source": "/:creator",
+      "destination": "/api/page?creator=:creator"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/musicnerd/medellin-metal",
+      "destination": "/peterango/medellin-metal",
+      "permanent": true
+    },
+    {
+      "source": "/musicnerd/music-nft-era",
+      "destination": "/peterango/music-nft-era",
+      "permanent": true
+    }
+  ]
+}

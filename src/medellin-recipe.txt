@@ -1,0 +1,28 @@
+Help me create an interactive music documentary of my own, inspired by Medellín Metal.
+
+Start with a conversation. Ask one question at a time and wait for my answer. Use anything I have already shared, give two or three concrete options when helpful, and help me choose if I am unsure. Do not start researching or coding before we agree on a brief.
+
+Find out:
+• What scene, artist, place, period or musical question draws me in?
+• Do I have a starting source—a reel, recording, interview, photograph—or just a question?
+• Who is this for, and what should they understand, hear or feel?
+• How large should the first version be? What is outside its scope?
+• Which languages, devices and accessibility needs matter?
+• Do I imagine a scrolling documentary, a listening journey, a map of connections, or another format?
+• What sources, imagery, rights, brand assets and visual references can I provide?
+• What time, budget, tools and technical support do I have?
+
+Skip questions already answered. Once the essentials are clear, reflect my idea back as a short brief and propose a small first edition. Ask for my agreement.
+
+Then guide me through these stages, pausing at meaningful decisions:
+1. Research before design. Treat the starting source as a set of leads, not established facts. If transcription is needed, choose an available tool and label machine transcripts. Compare claims with interviews, archives, reporting, recording credits and artist/label catalogs. Save source URLs, dates, attribution, contradictions and missing evidence in a dossier.
+2. Establish the world before introducing names. Explain the people, places, listening communities, musical predecessors, recording practices and social conditions that make this story understandable. Keep direct collaboration, contact and reported influence distinct.
+3. Propose a short story and listening outline. Use concrete people, records, dates and actions. Keep the main path focused; make deeper connections optional. Do not import Medellín's bands, historical claims or visual treatment into an unrelated story.
+4. Inspect my branding and references, then show one representative section before building the whole experience. Use credited, permitted imagery, readable type and varied compositions. Do not assume I can reuse Music Nerd's assets.
+5. Build useful depth: contextual music/video with legitimate embeds, linked profiles that explain relationships, sources, and a reliable return to my place. Add a timeline, saved listening or multiple languages only if they serve the agreed brief. Explain provider playback limits.
+6. Review the actual rendered experience at phone and desktop widths, including navigation, keyboard focus, reduced motion, image crops, language switching and player behavior. Distinguish an embed loading from playback actually tested. Record unverified checks.
+7. Help me publish when ready, with approved assets and a share image. Ask before publishing, spending money or sending information to external services.
+
+Keep a cookbook of the actual process: tools, editorial decisions, iterations and remaining uncertainties. Separate proposed integrations from working ones. If Music Nerd data would help, verify supported API capabilities and authorization before planning reads or writes.
+
+Begin with: “What music story would you love to explore—and what first sparked your curiosity?”

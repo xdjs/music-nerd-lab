@@ -1,0 +1,114 @@
+Music Nerd Lab — researched music experiences
+
+Version 1.1 · 4 November 2026 · Case study: Medellín Metal (https://medellinmetal-mn.vercel.app)
+
+This protocol reconstructs the documented build and editorial decisions, then turns them into a repeatable method. It is not a verbatim prompt log or a promise that one prompt will reproduce the design. The research, design reviews and corrections were part of the work.
+
+What this edition actually uses
+
+• Seed: Edward Effect’s Instagram reel; Apify apify~instagram-reel-scraper, includeTranscript: true — Machine transcript; not manually checked against the full audio
+• Research: Web discovery and source reading; Firecrawl used for the November 4 expansion; interviews, archives, reporting and label catalogs — A search result, repeated anecdote or generated summary is not independent confirmation
+• Content: Research dossier; bilingual chapters, entities, relationships and media in public/data.js — Local structured content, not Music Nerd database records
+• Experience: HTML, CSS and JavaScript; Music Nerd icon, system typography, approved Cut & Paste direction — A custom standalone artifact, not a deployed generic generator
+• Listening: Bandcamp, YouTube and Spotify embeds; persistent player, saved selections, six listening guides — Provider controls and restrictions apply; a loaded embed does not prove playback
+• Contributions: Contextual correction/archive form, multiple evidence links, quotation choice, prepared email and copy fallback — Visitor sends the email. No automatic delivery, hosted uploads or review database
+• Publication: Separate Vercel static project musicnerd/medellinmetal-mn — No main MusicNerdWeb release or Music Nerd API/database integration
+
+The present edition contains eight main chapters, three optional routes, 50 illustrated entries and 11 recordings/documentaries. Counts describe this edition; they are not a template requirement.
+
+Decisions that shaped the result
+
+• The original brief called for Colombian metal history, but the evidence centered Medellín: Rename to Medellín Metal; make geographic limits explicit and retain selected outward connections
+• Band-first copy did not establish the scene: Begin with geography, political conditions, earlier rock, imported records, collective listening and the work of making music
+• Charcoal cards and a white entrance felt detached from the story: Adopt the inspected Style B Cut & Paste reference, actual Music Nerd branding and system font; use a full-image entrance, archival images, short passages and varied compositions
+• Tape decoration and repeated same-side notes felt arbitrary: Make tape cross paper edges; vary placement and alternate image passages, paper passages and listening stops
+• Prose sounded vague or self-congratulatory: Replace claims about the importance of evidence with concrete people, places, dates and actions; move methodological explanations to Sources
+• A remembered Lamb of God connection was only a research lead: Remove that branch; retain supported production connections, including Erik Rutan, and explain his career through linked entries
+• Names led to thin or imageless entries: Add sourced images, biographical context, relationship explanations and trails; label contextual images when a portrait is unavailable
+• Players cropped videos or required redundant custom controls: Preserve 16:9 inline/cinema video; keep audio mounted across navigation; expose the actual provider control rather than promise unsupported one-click playback
+• Mobile navigation obscured the story; Safari exposed a bulky rail scrollbar: Use a compact blurred-backdrop menu with prominent centered links; mobile chapter dropdown; quiet desktop progress with hover/focus labels
+• The entrance had duplicate actions and explanatory clutter: One Begin action, concise reading estimate and animated scroll cue; remove the extra duration disclosure and redundant introductory label
+• The prologue repeated “before” and lacked a distinct opening: Give the introduction its own near-full-screen moment before photographic scene-setting
+• The story gave overseas recognition too much weight: Keep eight Medellín-centered chapters; offer Rutan, Internal Suffering and Bogotá as three optional routes
+• Source review exposed imprecise historical details: Separate soundtrack rehearsals at Luis Emilio’s house from recording at Chava Bluss; distinguish streaming-edition dates from band history
+• Visitors could identify omissions or errors: Add contextual, private-by-default contributions with evidence links and an honest email handoff
+
+Repeatable working method
+
+1. Save a bounded brief
+
+Record the topic, place, period, audience, languages, seed material, research budget and exclusions. Identify the existing brand and approved visual reference before implementing UI. Keep later scope changes with their reasons. A scene or artist question can replace a reel as the seed.
+
+**Deliverable:** a brief and decision history. Do not describe a regional selection as a comprehensive national history.
+
+2. Turn the seed into research questions
+
+Preserve the original URL and permitted source material privately. Mark machine transcripts as machine-generated and record whether they were auditioned. Extract names and claims without accepting them as facts. Ask about musical predecessors, equipment, rehearsal spaces, audiences, recordings, distribution, disagreements, later memory and whose voices are absent.
+
+**Deliverable:** questions, candidate entities and claims requiring verification.
+
+3. Build a source-backed dossier
+
+Read the relevant sources, prioritize firsthand testimony and original credits where available, and distinguish recollection, documentary evidence, criticism and editorial inference. Record publication date separately from event date and original-release date separately from reissue/platform date. Preserve contradictions and unavailable evidence.
+
+For this build, useful source families included Universo Centro’s account of rehearsal and exchange houses; MUROCK’s earlier rock history; Centro Nacional de Memoria Histórica for political context; VICE’s soundtrack history; artist interviews; Invisible Oranges’ listening criticism; and artist/label catalogs. Exact URLs and limitations belong in the dossier (https://medellinmetal-mn.vercel.app/research/RESEARCH.md).
+
+**Deliverable:** a research document with source links and open questions. Do not imply cartel violence alone explains the music, or that repeated retellings prove exclusive invention of a genre.
+
+4. Structure connections before rendering them
+
+Give each local entity a stable ID, type, bilingual description, source references and image caption. Give each relationship a specific explanation and source: membership, production, collaboration, distribution or attributed influence. Keep these relationship types distinct. Attach provider IDs and edition dates to recordings.
+
+The current site uses arrays in public/data.js. A formal claim ledger with source versions, passage references and review states is recommended for future builds; it is not already a Music Nerd-backed system here.
+
+**Deliverable:** navigable entities and relationships whose links explain why the connection matters.
+
+5. Write and compose the experience together
+
+Outline the central story before adding side routes. Start with the conditions and musical practices that make the bands understandable. Write short, concrete passages in a knowledgeable documentary voice. Introduce people before relying on their names. Link relevant names in narrative and listening notes.
+
+Alternate full-image passages, readable paper surfaces, contextual objects and deliberate listening stops. Keep captions visible and distinguish later imagery from images of the described period. Check identity, date and usage permission separately; attribution alone does not clear publication rights.
+
+Translate meaning, names, dates, interface labels and source qualifications consistently. Preserve the reader’s place when changing language or exploring an entry.
+
+**Deliverable:** an EN/ES story with a clear main path, optional depth and intentional visual pacing.
+
+6. Make listening part of the reporting
+
+Choose a specific track or comparison and explain what a listener can attend to. Attribute borrowed critical descriptions. Do not invent timestamps or present unperformed listening as firsthand analysis. Prefer artist/label streams; identify listener uploads accurately.
+
+Keep video proportions intact, stop competing playback, preserve audio across navigation, and provide a provider link. Estimate reading separately from optional music and films; a reading estimate is not the duration of everything available.
+
+**Deliverable:** music that advances the story, with playback claims limited to what was actually tested.
+
+7. Accept evidence without automatically publishing it
+
+Collect the entry URL, proposed correction or recollection, multiple supporting links, what each supports, optional dates/credit and quotation permission. Accept firsthand accounts even without a URL, but identify them as testimony. Default to private review. Permission to quote words does not grant rights to photographs or recordings.
+
+Current flow: prepare email → visitor reviews → visitor sends, or copies into webmail and attaches files there. Drafts remain in tab memory until reload. A form-service setup attempt failed with HTTP 522 and was not shipped. No automatic inbox delivery or upload hosting should be advertised.
+
+Editorial procedure for received contributions: check the evidence, preserve disagreement where warranted, decide the correction, update affected passages and relationships in both languages, and record accepted factual changes with their sources in edition notes. This procedure is manual; no accepted visitor correction or completed backend audit trail is claimed by this build.
+
+8. Verify and publish an identifiable edition
+
+Run syntax, content/reference and relevant interaction checks. Exercise the actual entry point in a browser: image contrast, inline links, profiles, close/return behavior, language changes, chapter progress, menus, player dimensions and forms. Check desktop and phone widths, keyboard focus and reduced motion. Distinguish narrow desktop review from native phone verification.
+
+Keep separate evidence for rendered embeds, successful playback, audible listening and delivered email. Record blocked or unverified checks rather than turning them into passes.
+
+Publish only approved assets and a sanitized dossier to the authorized project. Exclude transcripts, scraper payloads, credentials and QA fixtures. Record the deployment, verify public files and private-file exclusions, and separate publication from editorial acceptance. The November 4 checks passed syntax, content-reference and DOM interaction tests; native Safari review covered desktop and 390px layouts. All 35 deployed public files byte-matched the verified publication files. Current provider audio audition, email delivery and native iPhone behavior remain unverified.
+
+Copyable starting prompt
+
+This is a reusable brief distilled from the iteration above, not the original prompt verbatim:
+
+Build a bilingual Music Nerd Lab documentary about [scene/artist/topic], starting from [question, URL or source]. First establish the geographic and historical scope and research the claims; save a sourced dossier with disagreements and missing evidence. Introduce the musical and social context before the bands. Follow the people, rehearsal spaces, recordings, producers, labels, audiences and exchange networks that explain the story.
+
+Inspect Music Nerd’s existing branding and the approved visual reference. Create a mobile-friendly, image-led editorial journey with short concrete passages, varied compositions, credited archival imagery and deliberate listening/viewing stops. Give linked people and things illustrated entries, sourced relationship explanations and a reliable return to the reader’s place. Include English and Spanish, timeline imagery, persistent audio, accessible navigation and reduced-motion behavior.
+
+Work iteratively: review research and scope, story and listening outline, rendered visual direction, connected entries, then desktop/mobile interactions. Record decisions that materially change the result. Add private correction/archive contributions with evidence links and clear delivery behavior. Verify the actual flows and document remaining gaps before an authorized publication. State precisely which APIs and database writes are implemented; label simulations and proposed integration explicitly.
+
+Proposed Music Nerd integration
+
+The next experiment is to resolve existing artists, retrieve permitted originals, queue bounded research for gaps, and save reviewed assertions through supported Music Nerd contracts. A versioned editorial manifest could connect passages to assertions and sources. An accepted correction could then identify dependent EN/ES passages for review.
+
+That is a proposed experiment, not an API used by this published page. Recheck current API contracts and authorization before implementation. This proposed integration still requires a separate implementation and authenticated end-to-end verification.

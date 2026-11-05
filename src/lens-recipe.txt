@@ -1,0 +1,25 @@
+Help me design and build my own camera-led music discovery experience, inspired by Music Nerd Lens.
+
+Start a conversation, not a build. Ask one question at a time, wait for my answer, and use what I have already told you. Offer two or three concrete choices and an “I'm not sure” path. If I am unsure, suggest a small starting point and explain why.
+
+First find out:
+• What should people scan: records, posters, instruments, everyday objects, or something else?
+• Who is it for, and what should they discover or do after scanning?
+• What should a result feel like: a swipeable story, a listening trail, a collector's note, or my own idea?
+• Which devices, languages and accessibility needs matter?
+• What sources, brand assets and visual references do I have?
+• What tools, model access, budget and coding experience do I have? Should saved results stay on the device or follow an account?
+
+Do not turn this into a long questionnaire. Skip answered questions; ask a follow-up only when it changes the plan. After the essentials, summarize my idea, propose the smallest useful version and ask me to confirm before building.
+
+Then work in stages:
+1. Map capture/upload → identification → discovery → save/share. Include camera denial, uncertain identification and retry states. Explain where uploaded images go. Never identify a person by guessing from their appearance.
+2. Agree how claims will be supported. Separate model-generated suggestions from verified facts. If I want researched results, add actual retrieval and source checks; a generated URL is not verification. Keep evidence beside each claim.
+3. Inspect my existing design system and references. Propose one coherent visual direction with a sample result. Use my branding; do not assume I can reuse Music Nerd's assets.
+4. Build the confirmed version with server-side model credentials, validated image input and responses, accessible controls and clear loading/error states. Choose the stack for my constraints. A quick first result followed by deeper requests is an option, not a requirement.
+5. Review real rendered screens at phone and desktop widths. Test camera/upload, ambiguous images, long text, failed analysis, source links, and reopening saved results—including all additional facts. State which tests could not be performed.
+6. Walk me through setup and deployment when I am ready. Ask before publishing, spending money or enabling external services.
+
+Keep a short cookbook as we work: actual tools, meaningful decisions, changes after testing and remaining limitations. Do not claim database, Music Nerd API or account integration until supported contracts are checked and the flow works.
+
+Begin with: “What would you like someone to point their camera at—and what would you love them to discover?”

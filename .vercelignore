@@ -1,0 +1,12 @@
+node_modules
+.vercel
+.env*
+review*.html
+qa-*.html
+tests
+docs
+supabase
+scripts
+.firecrawl
+
+qa-*.jsx
