@@ -2,6 +2,11 @@
 
 # Music Nerd Apps
 
+## Originator and creative direction
+
+Concept, editorial direction and creative development by **[Pete Rango](https://github.com/p3t3rango)**, built with AI assistance. Music Nerd is the publishing context; repository ownership does not replace the creator credit.
+
+
 Standalone app store and creator community for **lab.musicnerd.vercel.app**. The approved minimal Music Nerd design is retained; launch collection and editorial curation are intentionally out of scope.
 
 ## Review locally
@@ -19,7 +24,7 @@ Run `npm ci` then `npm start`; open http://127.0.0.1:4186. Without Supabase envi
 - Immersive embedded player with direct-link fallback; authenticated server-side framing-header checks with public-network restrictions.
 - App and creator share metadata, a branded default share image, and Vercel configuration.
 
-The public collection contains Music Nerd Lens by Pete Rango and the Medellín Metal artifact by Music Nerd. Demo listings are archived. The site is deployed at **https://lab.musicnerd.vercel.app** in the Music Nerd Vercel team and connected to the existing Music Nerd Supabase project, as requested by Pete and Carl. See [setup instructions](docs/backend-setup.md) for activation and the remaining verification.
+The public collection contains Music Nerd Lens by Pete Rango and the Medellín Metal artifact by Pete Rango. Demo listings are archived. The site is deployed at **https://lab.musicnerd.vercel.app** in the Music Nerd Vercel team and connected to the existing Music Nerd Supabase project, as requested by Pete and Carl. See [setup instructions](docs/backend-setup.md) for activation and the remaining verification.
 
 ## Design
 
