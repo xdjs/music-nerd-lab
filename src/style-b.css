@@ -35,3 +35,25 @@ main.store-view{max-width:1440px;padding:0 40px}.collection-intro{padding:20px 0
 @media(hover:none){.launch{opacity:1;transform:none}}
 
 .app-preview{aspect-ratio:16/10;object-fit:contain}
+
+/* Consistent collection cards: keep attribution aligned without clipping copy. */
+.app-grid{align-items:stretch}
+.app-card{display:flex;flex-direction:column;min-width:0}
+.app-card>.art-link{flex-shrink:0}
+.app-card>.card-meta{margin-top:auto;padding-top:4px;min-height:32px;gap:12px}
+.app-card>.card-meta>.creator-link{min-height:32px;min-width:0;text-align:left}
+.app-card>.card-meta>span{flex-shrink:0}
+.app-card .app-preview{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:contain}
+@media(max-width:540px){
+ .store-view .app-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+ .store-view .collection-intro{padding:18px 0 22px}
+ .store-view .collection-intro p{max-width:36ch;font-size:13px;line-height:1.5}
+ .app-card .card-title{margin-top:12px;align-items:flex-start;gap:12px}
+ .app-card .card-title h3{font-size:20px;line-height:1.25;letter-spacing:-.025em}
+ .app-card .card-title .icon-button{width:44px;height:44px;flex-shrink:0;margin-top:-8px;margin-right:-10px}
+ .app-card>p{font-size:14px;line-height:1.5;margin:6px 0 12px;max-width:none}
+ .app-card>.card-meta{padding-top:0;min-height:36px}
+ .app-card>.card-meta>.creator-link{font-size:12px;min-height:36px}
+ .app-card .launch{display:none}
+ .app-card .art-link{border-radius:6px;background:var(--soft)}
+}
