@@ -17,7 +17,7 @@ export function useCommunity(){
  const localRef=useRef(local);const generation=useRef(0);const currentUser=useRef(null);
  function persist(fn){const next=fn(localRef.current);try{localStorage.setItem(key,JSON.stringify(next));}catch{throw Error('This device is out of preview storage. Try a smaller image.');}localRef.current=next;setLocal(next);}
  async function refresh(uid=currentUser.current){
-  if(!supabase)return;const seq=++generation.current;setError('');
+  if(!supabase)return;const seq=++generation.current;setLoading(true);setError('');
   try{
    let profiles=[],appRows=[],commentRows=[],followers=[],activity=[],reports=[],isMod=false;
    if(authRef.current.authenticated){const r=await call('state');({profiles,apps:appRows,comments:commentRows,followers,activity,reports}=r);isMod=r.moderator;if(seq===generation.current){setCanPublish(!!r.publisher);setUser(r.user);currentUser.current=r.user.id;uid=r.user.id;}}

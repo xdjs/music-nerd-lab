@@ -57,3 +57,11 @@ main.store-view{max-width:1440px;padding:0 40px}.collection-intro{padding:20px 0
  .app-card .launch{display:none}
  .app-card .art-link{border-radius:6px;background:var(--soft)}
 }
+
+/* Reserve the catalog's shape while the first request is pending. */
+.catalog-placeholder{min-width:0}
+.catalog-placeholder>div{background:var(--soft);border-radius:5px}
+.placeholder-art{aspect-ratio:16/10;width:100%}
+.placeholder-title{height:24px;width:72%;margin-top:14px}
+.placeholder-description{height:38px;width:92%;margin-top:8px}
+.placeholder-creator{height:22px;width:110px;margin-top:18px}
