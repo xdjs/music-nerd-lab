@@ -1,0 +1,5 @@
+.mobile-experience-preview{background:var(--bg)}
+.mobile-experience-preview>img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--soft)}
+.mobile-experience-launch{padding:16px;display:flex;justify-content:center;border-top:1px solid var(--line)}
+.mobile-experience-launch .button{min-height:44px;width:100%}
+@media(max-width:800px){.player-view .player-shell:has(.mobile-experience-preview){height:auto;min-height:0}.player-shell:has(.mobile-experience-preview) .player-toolbar .icon-button{display:none}}
